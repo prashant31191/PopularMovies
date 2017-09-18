@@ -5,7 +5,6 @@ def config=rootProject.ext.configuration;
 def libs=rootProject.ext.dependencies;
 def testLibs=rootProject.ext.testDependencies;
 
-
 android {
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
@@ -26,7 +25,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    def API_KEY='"INSERT_THE_KEY"'
+    def API_KEY='"a7d9dcfcb6f3d6330357c8ae5fe06e58"'
+    //def API_KEY='"INSERT_THE_KEY"'
 
     buildTypes {
         release {
@@ -39,10 +39,14 @@ android {
     buildTypes.each {
         it.buildConfigField "String", "MOVIE_DATABASE_API_KEY", API_KEY
     }
-
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
     }
+
+    dexOptions {
+        jumboMode true
+    }
+
 }
 
 dependencies {

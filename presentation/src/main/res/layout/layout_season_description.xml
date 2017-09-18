@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <com.popularmovies.vpaliy.popularmoviesapp.ui.view.TranslatableLayout
     android:padding="@dimen/spacing_large"
     android:id="@+id/details_background"

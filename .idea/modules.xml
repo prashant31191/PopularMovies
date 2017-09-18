@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PopularMoviesApp.iml" filepath="$PROJECT_DIR$/PopularMoviesApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PopularMovies.iml" filepath="$PROJECT_DIR$/.idea/PopularMovies.iml" />
+      <module fileurl="file://E:\Prashant\Github_Demo\PopularMovies\PopularMoviesApp.iml" filepath="E:\Prashant\Github_Demo\PopularMovies\PopularMoviesApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
+      <module fileurl="file://E:\Prashant\Github_Demo\PopularMovies\data\data.iml" filepath="E:\Prashant\Github_Demo\PopularMovies\data\data.iml" />
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
+      <module fileurl="file://E:\Prashant\Github_Demo\PopularMovies\domain\domain.iml" filepath="E:\Prashant\Github_Demo\PopularMovies\domain\domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/presentation/presentation.iml" filepath="$PROJECT_DIR$/presentation/presentation.iml" />
+      <module fileurl="file://E:\Prashant\Github_Demo\PopularMovies\presentation\presentation.iml" filepath="E:\Prashant\Github_Demo\PopularMovies\presentation\presentation.iml" />
     </modules>
   </component>
 </project>
