@@ -78,7 +78,7 @@
         android:layout_marginStart="@dimen/spacing_big"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.vpaliy.chips_lover.ChipsLayout
+  <!--  <com.vpaliy.chips_lover.ChipsLayout
         android:id="@+id/chipsContainer"
         android:transitionName="@string/tags_transition_name"
         android:orientation="horizontal"
@@ -92,7 +92,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="@dimen/spacing_medium"
         app:layout_constraintTop_toBottomOf="@+id/media_duration"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent" />-->
 
     <TextView
         android:id="@+id/media_ratings"
@@ -124,5 +124,6 @@
         android:layout_marginTop="@dimen/spacing_medium"
         style="@style/Widget.Title"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chipsContainer"/>
+        app:layout_constraintTop_toBottomOf="@+id/media_duration"/>
+        <!--app:layout_constraintTop_toBottomOf="@+id/chipsContainer"/>-->
 </com.popularmovies.vpaliy.popularmoviesapp.ui.view.TranslatableLayout>

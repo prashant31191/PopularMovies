@@ -93,8 +93,8 @@ public abstract class MediaDetailsFragment extends BaseFragment
     @BindView(R.id.media_ratings)
     protected TextView mediaRatings;
 
-    @BindView(R.id.chipsContainer)
-    protected ChipsLayout tags;
+   /* @BindView(R.id.chipsContainer)
+    protected ChipsLayout tags;*/
 
     @BindView(R.id.media_release_year)
     protected TextView releaseYear;
@@ -308,10 +308,10 @@ public abstract class MediaDetailsFragment extends BaseFragment
         if(swatch!=null){
             toggle.setBackgroundTintList(ColorStateList.valueOf(swatch.getRgb()));
             detailsParent.setBackgroundColor(swatch.getRgb());
-            ChipBuilder builder=tags.getChipBuilder()
+           /* ChipBuilder builder=tags.getChipBuilder()
                     .setBackgroundColor(swatch.getTitleTextColor())
                     .setTextColor(swatch.getBodyTextColor());
-            tags.updateChipColors(builder);
+            tags.updateChipColors(builder);*/
             mediaTitle.setTextColor(swatch.getBodyTextColor());
             releaseYear.setTextColor(swatch.getBodyTextColor());
             mediaRatings.setTextColor(swatch.getBodyTextColor());
@@ -386,7 +386,7 @@ public abstract class MediaDetailsFragment extends BaseFragment
         mediaTitle.setText(mediaCover.getMovieTitle());
         releaseYear.setText(mediaCover.getFormattedDate());
         mediaRatings.setText(mediaCover.getAverageRate());
-        tags.setTags(mediaCover.getGenres());
+        /*tags.setTags(mediaCover.getGenres());*/
         if(sharedPosterPath==null){
             sharedPosterPath=mediaCover.getPosterPath();
             loadCover();
@@ -408,7 +408,7 @@ public abstract class MediaDetailsFragment extends BaseFragment
             @Override
             public boolean onPreDraw() {
                 detailsParent.getViewTreeObserver().removeOnPreDrawListener(this);
-                ParamsFactory.shiftElementsFrom(poster, Arrays.asList(mediaTitle,releaseYear,tags,mediaDescription));
+                ParamsFactory.shiftElementsFrom(poster, Arrays.asList(mediaTitle,releaseYear,/*tags,*/mediaDescription));
                 detailsParent.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
                     @Override
                     public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {

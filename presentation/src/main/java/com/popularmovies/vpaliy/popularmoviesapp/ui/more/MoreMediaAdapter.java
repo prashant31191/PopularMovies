@@ -53,8 +53,8 @@ public class MoreMediaAdapter extends AbstractMediaAdapter<MediaCover> {
         @BindView(R.id.media_title)
         TextView mediaTitle;
 
-        @BindView(R.id.chipsContainer)
-        ChipsLayout chipsContainer;
+       /* @BindView(R.id.chipsContainer)
+        ChipsLayout chipsContainer;*/
 
         @BindView(R.id.details_background)
         View background;
@@ -75,14 +75,14 @@ public class MoreMediaAdapter extends AbstractMediaAdapter<MediaCover> {
                     ViewCompat.setTransitionName(mediaTitle,context.getString(R.string.title_transition_name));
                     ViewCompat.setTransitionName(releaseYear,context.getString(R.string.date_transition_name));
                     ViewCompat.setTransitionName(background,context.getString(R.string.media_details_transition_name));
-                    ViewCompat.setTransitionName(chipsContainer,context.getString(R.string.tags_transition_name));
+                  //  ViewCompat.setTransitionName(chipsContainer,context.getString(R.string.tags_transition_name));
                     rxBus.send(ExposeEvent.exposeMediaDetails(args, Pair.create(itemView,context.getString(R.string.background_transition_name)),
                             Pair.create(posterImage,context.getString(R.string.backdrop_transition_name)),
                             Pair.create(mediaTitle,context.getString(R.string.title_transition_name)),
                             Pair.create(ratings,context.getString(R.string.ratings_transition_name)),
                             Pair.create(releaseYear,context.getString(R.string.date_transition_name)),
-                            Pair.create(background,context.getString(R.string.media_details_transition_name)),
-                            Pair.create(chipsContainer,context.getString(R.string.tags_transition_name))));
+                            Pair.create(background,context.getString(R.string.media_details_transition_name))/*,
+                            Pair.create(chipsContainer,context.getString(R.string.tags_transition_name))*/));
                     unlockAfter(UNLOCK_TIMEOUT);
                 }
             });
@@ -93,7 +93,7 @@ public class MoreMediaAdapter extends AbstractMediaAdapter<MediaCover> {
             MediaCover cover=at(getAdapterPosition());
             releaseYear.setText(cover.getFormattedDate());
             mediaTitle.setText(cover.getMovieTitle());
-            chipsContainer.setTags(cover.getGenres());
+            /*chipsContainer.setTags(cover.getGenres());*/
             ratings.setText(cover.getAverageRate());
             Glide.with(itemView.getContext())
                     .load(cover.getMainBackdrop())
@@ -117,10 +117,10 @@ public class MoreMediaAdapter extends AbstractMediaAdapter<MediaCover> {
             //apply if not null
             if(swatch!=null){
                 background.setBackgroundColor(swatch.getRgb());
-                ChipBuilder builder=chipsContainer.getChipBuilder()
+                /*ChipBuilder builder=chipsContainer.getChipBuilder()
                         .setBackgroundColor(swatch.getTitleTextColor())
                         .setTextColor(swatch.getBodyTextColor());
-                chipsContainer.updateChipColors(builder);
+                chipsContainer.updateChipColors(builder);*/
                 mediaTitle.setTextColor(swatch.getBodyTextColor());
                 releaseYear.setTextColor(swatch.getBodyTextColor());
                 ratings.setTextColor(swatch.getBodyTextColor());

@@ -23,7 +23,7 @@
             <target android:targetId="@id/media_release_year" />
             <target android:targetId="@id/media_ratings" />
             <target android:targetId="@id/details_background"/>
-            <target android:targetId="@id/chipsContainer"/>
+            <!--<target android:targetId="@id/chipsContainer"/>-->
             <target android:targetId="@id/background" />
             <target android:targetId="@id/backdrop_pager" />
         </targets>

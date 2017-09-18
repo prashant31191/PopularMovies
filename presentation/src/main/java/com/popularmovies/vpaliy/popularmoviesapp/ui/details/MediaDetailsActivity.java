@@ -53,13 +53,19 @@ public class MediaDetailsActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        Fragment fragment=getSupportFragmentManager().findFragmentByTag(Constants.MOVIE_DETAILS_TAG);
-        if(fragment!=null){
-            MovieDetailsFragment detailsFragment=MovieDetailsFragment.class.cast(fragment);
-            if(detailsFragment.isDialogOn()){
-                detailsFragment.turnOffDialog();
-                return;
+        try {
+            Fragment fragment = getSupportFragmentManager().findFragmentByTag(Constants.MOVIE_DETAILS_TAG);
+            if (fragment != null) {
+                MovieDetailsFragment detailsFragment = MovieDetailsFragment.class.cast(fragment);
+                if (detailsFragment.isDialogOn()) {
+                    detailsFragment.turnOffDialog();
+                    return;
+                }
             }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
         }
         super.onBackPressed();
     }
